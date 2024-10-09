@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Password {
 
 public static void main(String[] args) {
+    //INITIAL VALUES. 0 = false, 1 = true
     int min =8;
     int max=16;
     int digit=0;
