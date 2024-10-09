@@ -5,6 +5,7 @@ public static void main(String[] args) {
     //INITIAL VALUES. 0 = false, 1 = true
     int min =8;
     int max=16;
+    //INT 0 IT'S LIKE BOOLEAN FALSE
     int digit=0;
     int special=0;
     int upCount=0;
@@ -13,7 +14,8 @@ public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     System.out.println(" Enter Your Password:");
         password = scan.nextLine();
-    if(password.length()>=min&&password.length()<=max){
+    //STATEMENT TO CHECK IS PASSWORD LENGTH IS MORE THAN 8 AND LESS THAN 16
+    if(password.length()>=min&&password.length()<=max){ //IF TRUE - CONTINUE, IF NOT - JUMP TO "ELSE"
         for(int i =0;i<password.length();i++){
             char c = password.charAt(i);
             if(Character.isUpperCase(c)){
