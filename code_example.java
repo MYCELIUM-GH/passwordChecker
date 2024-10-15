@@ -34,6 +34,8 @@ public static void main(String[] args) {
 
 // ========================================= END OF THE PART OF JOHN ====================================================
 
+
+// ========================================= PART FOR DARYA ========================================================
         if(special>=1&&loCount>=1&&upCount>=1&&digit>=1) { //IF ALL OF CONDITIONS ARE TRUE - PRINT TEXT
             System.out.println("Password is good.");
         }
@@ -75,7 +77,9 @@ public static void main(String[] args) {
             System.out.println(" You need atleast one special chracter:");
         }
     }
-
+    
+// ====================================== END OF THE PART FOR DARYA ==============================================
+    
         if(password.length()>max||password.length()>=max&&upCount>1&&loCount>1&&digit>1) {
             System.out.println(" Password is too long.Limit is "+max+" chracters:");
             System.out.println(" You need atleast one special chracter:");
