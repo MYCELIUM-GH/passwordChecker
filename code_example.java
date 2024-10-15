@@ -3,6 +3,9 @@ public class code_example {
 
 public static void main(String[] args) {
     //INITIAL VALUES. 0 = false, 1 = true
+
+    // ================================================== PART FOR JOHN ========================================================
+    
     int min=8,max=16,digit=0,special=0,upCount=0,loCount=0; //INT 0 IT'S LIKE BOOLEAN FALSE
     
     Scanner scn=new Scanner(System.in); //CREATING NEW VARIABLE. TYPE - SCANNER, NAME - scn
@@ -28,6 +31,8 @@ public static void main(String[] args) {
                 special++;
             }
         } //THE END OF "FOR" LOOP
+
+// ========================================= END OF THE PART OF JOHN ====================================================
 
         if(special>=1&&loCount>=1&&upCount>=1&&digit>=1) { //IF ALL OF CONDITIONS ARE TRUE - PRINT TEXT
             System.out.println("Password is good.");
