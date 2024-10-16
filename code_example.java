@@ -1,33 +1,34 @@
-import java.util.Scanner;
+import java.util.Scanner; // import Scanner class
 public class code_example {
 
 public static void main(String[] args) {
     //INITIAL VALUES. 0 = false, 1 = true
 
     // ================================================== PART FOR JOHN ========================================================
+    // This program tests a password to check for complexity requirements.
     
-    int min=8,max=16,digit=0,special=0,upCount=0,loCount=0; //INT 0 IT'S LIKE BOOLEAN FALSE
+    int min=8,max=16,digit=0,special=0,upCount=0,loCount=0; //Varibles used in this program. Initialised to begining values. 
     
-    Scanner scn=new Scanner(System.in); //CREATING NEW VARIABLE. TYPE - SCANNER, NAME - scn
+    Scanner scn=new Scanner(System.in); //CREATING NEW SCANNER CLASS, VARIABLE SCN
     
-    System.out.println("Enter Your Password:"); //PROMPT TO ASK USER FOR TYPING
-    String password=scn.nextLine(); //IT WILL SAVE USER INPUT INTO VARIABLE CALLED password
+    System.out.println("Enter Your Password:"); //Prompt for password.
+    String password=scn.nextLine(); //Scanner object to read input from system.in into varible called password
     
-    //STATEMENT TO CHECK IS PASSWORD LENGTH IS MORE THAN 8 AND LESS THAN 16
-    if(password.length()>=min&&password.length()<=max) { //CHECKING FOR PASSWORD LENGTH >=8 AND <=16. IF TRUE - CONTINUE, IF NOT - JUMP TO "ELSE"
-        for(int i=0;i<password.length();i++) { //LOOP. CREATES VALUE 0, WILL ADD +1 TO VALUE BEFORE VALUE WILL BE EVEN THAN PASSWORDS LENGTH
-            char c = password.charAt(i); //IT WILL CHECK EVERY CHAR IN PASSWORD (PASSWORD LENGTH) TIMES
+    // check password is between 8(min) and 16(max) characters.
+    if(password.length()>=min&&password.length()<=max) { // check if password length between >=8 AND <=16. If TRUE - continue, If not - JUMP to "ELSE"
+        for(int i=0;i<password.length();i++) { //create loop to iriterate through password to test for character requirements.
+            char c = password.charAt(i); //IT WILL CHECK EVERY CHAR IN PASSWORD (PASSWORD LENGTH)
             
-            if(Character.isUpperCase(c)) { //IF SOMEWHERE IN PASSWORD UPPERCASE IS EXISTING - RETURN 1 (TRUE)
+            if(Character.isUpperCase(c)) { //If character is uppercase, increment upCount   
                 upCount++;
             }
-            if(Character.isLowerCase(c)) { //IF SOMEWHERE IN PASSWORD LOWERCASE IS EXISTING - RETURN 1 (TRUE)
+            if(Character.isLowerCase(c)) { //If character is lowercase, increment  loCount. 
                 loCount++;
             }
-            if(Character.isDigit(c)) { //IF SOMEWHERE IN PASSWORD NUMBER IS EXISTING - RETURN 1 (TRUE)
+            if(Character.isDigit(c)) { //If character is digit, increment digit.
                 digit++;
             }
-            if(c>=33&&c<=46||c==64) {
+            if(c>=33&&c<=46||c==64) {// If character is a special character, then increment special.
                 special++;
             }
         } //THE END OF "FOR" LOOP
